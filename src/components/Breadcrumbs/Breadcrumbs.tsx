@@ -1,9 +1,12 @@
 import "./Breadcrumbs.sass"
+import {Dispatch} from "react";
 import { Link, useLocation } from "react-router-dom";
 import {FaChevronRight} from "react-icons/fa6";
 import {FaHome} from "react-icons/fa";
+import { Substance } from "../../utils/types";
+ 
 
-const Breadcrumbs = ({ selectedSubstance, setSelectedSubstance }) => {
+const Breadcrumbs = ({ selectedSubstance, setSelectedSubstance }: { selectedSubstance:Substance| undefined, setSelectedSubstance:Dispatch<Substance| undefined> }) => {
 
     const location = useLocation()
 
